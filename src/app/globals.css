@@ -1,26 +1,67 @@
 @import "tailwindcss";
+@config "../../tailwind.config.mjs";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom theme colors — matches your original setup */
+@theme {
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Body styling — your gradient background & font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card hover animation — from your code */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.12);
+}
+
+/* Badge utility classes — kept exactly as you had */
+.badge-blue {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.badge-indigo {
+  @apply bg-indigo-100 text-indigo-700;
+}
+
+.badge-violet {
+  @apply bg-violet-100 text-violet-700;
+}
+
+.badge-teal {
+  @apply bg-teal-100 text-teal-700;
+}
+
+/* Base Tailwind layers — required for v4, placed last */
+@layer base {
+  * {
+    @apply box-border;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* You can add more shared components here if needed */
+}
+
+@layer utilities {
+  /* Custom utilities here if needed */
 }

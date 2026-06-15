@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#dcfce7"/>
+  <rect x="40" y="40" width="560" height="280" rx="16" fill="#16a34a"/>
+  <rect x="80" y="90" width="480" height="40" rx="8" fill="#86efac"/>
+  <rect x="80" y="150" width="480" height="40" rx="8" fill="#86efac"/>
+  <rect x="80" y="210" width="480" height="40" rx="8" fill="#86efac"/>
+  <text x="320" y="300" fill="#14532d" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">CRUD App</text>
+</svg>
